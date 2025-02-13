@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id ='bulat'></canvas>
+    <script>
+        const nada = document.getElementById('bulat');
+        nada.width = window.innerWidth;
+        nada.height = window.innerHeight;
+
+        const ctx = nada.getContext('2d');
+        ctx.fillStyle = 'red';
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = 'black';
+
+        ctx.arc(300, 300, 50, 0, 2 * Math.PI );
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+</html>

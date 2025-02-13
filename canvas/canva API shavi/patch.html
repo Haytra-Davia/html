@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="patch"></canvas>
+    <script>
+        const bebas = document.getElementById('patch');
+        bebas.width = window.innerWidth;
+        bebas.height = window.innerHeight;
+
+        const c = bebas.getContext('2d');
+        c.lineWidth = 2;
+        c.strokeStyle = 'red';
+        c.fillStyle = 'green';
+
+        c.beginPath();
+        c.moveTo(350, 50);
+        c.lineTo(450, 350);
+        c.lineTo(150, 350);
+        c.lineTo(350, 270);
+        c.closePath();
+        c.fill();
+        c.stroke();
+    </script>
+</body>
+</html>

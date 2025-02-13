@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Sederhana</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #aadab8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        nav {
+            background-color: #055d1e;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f6e9e9;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #d3cbcb;
+            font-weight: 500;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 5rem;
+        }
+
+        .hero-image {
+            width: 40%;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 2rem;
+        }
+
+        .hero-text {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            padding: 5rem 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background-color: rgba(25, 223, 48, 0.384);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(250, 246, 246, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content {
+            padding: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">Portofolio Sederhana</div>
+            <div class="nav-links">
+                <a href="#hero">Hero</a>
+                <a href="#features">Fitur</a>
+                <a href="#content">Isi</a>
+                <a href="#contact">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <img src="./WhatsApp Image 2025-02-01 at 21.08.18_5fc2daeb.jpg" alt="Hero" class="hero-image">
+        <div class="hero-text">
+            <h1>Portofolio Sederhana</h1>
+            <p>Mantap banget nih, gampangin investasinya!</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-rocket feature-icon"></i>
+                <h3>Stok Saham</h3>
+                <p>Dapatkan impfangan dari perusahaan-industri terbaik di dunia.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bullseye feature-icon"></i>
+                <h3>Eropa Saham</h3>
+                <p>Portofolio yang aman dengan risiko little.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-gear feature-icon"></i>
+                <h3>T织 Predictive</h3>
+                <p>Kasus-kasus prediksi bisnis menggunakan data analisis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="content" class="content">
+        <h2>Daftar Isi</h2>
+        <p>Selamat datang di portofolio saya. Berikut daftar isi dari portfolio sederhana ini:</p>
+        <ul>
+            <li>Kumpulan saham berbasis Eropa.</li>
+            <li>Portofolio yang disusun secara manual dengan uang asisten.</li>
+            <li>Tugas akhir untuk analisis bisnis.</li>
+        </ul>
+    </section>
+</body>
+</html>

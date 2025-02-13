@@ -1,0 +1,61 @@
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+  
+  div {
+    --angle: 0deg;
+    width: 50vmin;
+    height: 50vmin;
+    border: 10vmin solid transparent;
+    border-radius: 200px;
+
+    border-image: conic-gradient(from var(--angle), rgb(250, 3, 3), yellow, lime, aqua, blue, magenta, red) 1;
+    
+    animation: 5s rotate linear infinite;
+  }
+  
+  @layer debug {
+    input[type="radio"] {
+      position: fixed;
+      top: 1em;
+      left: 1em;
+    }
+  
+    input[type="radio"]:after {
+      content: 'Toggle Fill';
+      white-space: nowrap;
+      padding-left: 1.5em;
+    }
+  
+    input[type="checkbox"]:checked + div {
+      border-image-slice: 1 fill;
+    }
+  }
+  
+  @layer layout {
+    html {
+      background-image: linear-gradient(45deg, #8c1b1b 25%, transparent 25%, transparent 75%, #dd1919 75%, #1c1b1b), linear-gradient(45deg, #f20505 25%, transparent 25%, transparent 75%, #e61010 75%, #131212);
+    }
+  
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      place-items: center;
+    }
+  
+    footer {
+      text-align: center;
+      font-style: italic;
+    }
+  }

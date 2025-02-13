@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id ="kotak"></canvas>
+    <script>
+        const canvas = document.getElementById('kotak');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'red';
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = 'black';
+
+        ctx.rect(10, 10, 100, 100);
+        ctx.fill();
+        ctx.stroke();
+        
+
+    </script>
+</body>
+</html>

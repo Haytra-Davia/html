@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            animation: titleFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes titleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .board {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+            transition: transform 0.5s ease;
+        }
+
+        .board:hover {
+            transform: scale(1.02);
+        }
+
+        .cell {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cell:hover {
+            background: rgba(255,255,255,0.4);
+            transform: scale(1.05);
+        }
+
+        .cell.x {
+            color: #ff4444;
+            text-shadow: 0 0 5px rgba(255,68,68,0.5);
+        }
+
+        .cell.o {
+            color: #4444ff;
+            text-shadow: 0 0 5px rgba(68,68,255,0.5);
+        }
+
+        .result {
+            margin-top: 30px;
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 15px;
+            animation: resultFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes resultFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            animation: particleFloat 3s infinite;
+        }
+
+        @keyframes particleFloat {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+
+        .winner {
+            animation: winnerAnnounce 1s ease;
+        }
+
+        @keyframes winnerAnnounce {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .sub-container {
+            text-align: center;
+            margin-top: 30px;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #aaa;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Buat Style yang Menarik</h1>
+        
+        <div class="board" id="board">
+            <div class="particle" style="left: 10px; animation-delay: 0s;"></div>
+            <div class="particle" style="left: 30px; animation-delay: 0.5s;"></div>
+            <div class="particle" style="left: 50px; animation-delay: 1s;"></div>
+            <div class="particle" style="left: 70px; animation-delay: 1.5s;"></div>
+            <div class="particle" style="left: 90px; animation-delay: 2s;"></div>
+        </div>
+
+        <div class="sub-container">
+            <h2>Klik pada Sel untuk Menonton Animasi</h2>
+            <p>Dukung animasi dengan mengklik pada setiap sel.</p>
+        </div>
+
+        <div class="result" id="result"></div>
+    </div>
+</body>
+</html>
