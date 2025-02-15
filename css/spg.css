@@ -1,4 +1,29 @@
-.satu
-{
-    background-color:red;
+body {
+    background-color: aqua;
 }
+
+.svg1 {
+    background: red;
+    height: 200px;
+}
+
+.rect1 {
+    width: 100px;
+    height: 100px;
+    x: 40%;
+    y: 30%;
+    background-color: blue;
+}
+
+.svg2 {
+    background-color: rgb(122, 29, 210);
+}
+
+.circle2 {
+    r: 60;
+    cy: 75px;
+    cx: 150px;
+    fill: black;
+
+}
+
